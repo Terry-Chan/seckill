@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * 秒杀
+ *
  * @author chenyigang
  */
 @Controller
@@ -105,7 +106,8 @@ public class SeckillController {
             return new SeckillResult<SeckillExecution>(false, "未注册");
         }
         try {
-            SeckillExecution seckillExecution = seckillService.excuteSeckill(seckillId, userPhone, md5);
+            //SeckillExecution seckillExecution = seckillService.excuteSeckill(seckillId, userPhone, md5);
+            SeckillExecution seckillExecution = seckillService.excuteSeckillProcedure(seckillId, userPhone, md5);
             return new SeckillResult<SeckillExecution>(true, seckillExecution);
         } catch (SeckillCloseException e) {
             SeckillExecution execution = new SeckillExecution(seckillId, SeckillStateEnum.END);
@@ -122,6 +124,7 @@ public class SeckillController {
 
     /**
      * 获取系统当前时间
+     *
      * @return
      */
     @RequestMapping(value = "/time/now", method = RequestMethod.GET)
