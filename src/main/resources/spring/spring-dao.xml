@@ -23,7 +23,7 @@
         <!-- 获取连接超时时间 -->
         <property name="checkoutTimeout" value="1000"/>
         <!-- 当连接失败重试次数 -->
-        <property name="acquireRetryAttempts" value="2"/>
+        <!--<property name="acquireRetryAttempts" value="2"/>-->
     </bean>
 
     <!--3.配置sessionFactory-->

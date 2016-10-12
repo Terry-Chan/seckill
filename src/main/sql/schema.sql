@@ -46,7 +46,7 @@ CREATE TABLE success_killed (
   COMMENT '用户手机号',
   `state`       TINYINT   NOT NULL DEFAULT -1
   COMMENT '状态标示：-1：无效，0：成功，1：已付款，2：已发货',
-  `create_time` TIMESTAMP NOT NULL
+  `create_time` TIMESTAMP NOT NULL DEFAULT current_timestamp
   COMMENT '创建时间',
   PRIMARY KEY (seckill_id, user_phone),
   KEY idx_create_time(create_time)
