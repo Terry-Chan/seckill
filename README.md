@@ -1,6 +1,5 @@
 # 慕课网Java高并发秒杀项目源码
 
-
 ## 项目介绍
 此秒杀项目前端使用了Bootstrap、jQuery, 后端主要使用了Spring、SpringMVC、Mybatis，
 数据库使用了MySQL, 缓存使用了Redis。同时使用了RESTful的风格，整个项目自底向上开发，
